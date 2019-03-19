@@ -2,10 +2,12 @@ module Transfer where
 
 import           Control.Monad                  ( when )
 import           Control.Concurrent.STM
-import           Control.Concurrent
+import           Control.Concurrent             ( forkIO
+                                                , threadDelay
+                                                )
 
 type Account = TVar Int
-type Name    = String
+type Name = String
 
 withdraw :: Account -> Int -> STM ()
 withdraw acc amount = do
