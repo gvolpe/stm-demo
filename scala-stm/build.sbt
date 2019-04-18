@@ -9,10 +9,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "scala-stm",
     libraryDependencies ++= Seq(
-      Libraries.cats,
-      Libraries.catsEffect,
-      Libraries.zioCore,
-      Libraries.zioCats
+      Libraries.zioCore
     )
   )
 
